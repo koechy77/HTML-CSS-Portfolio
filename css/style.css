@@ -1,0 +1,168 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: whitesmoke;
+    min-height: 100vh;
+}
+
+#hero h1 {
+    font-size: 50px;
+}
+
+#hero p {
+    font-size: 2.5rem;
+}
+
+section {
+    font-family: 'rubik scribble', cursive;
+}
+
+nav a {
+    color: aqua;
+    text-decoration: none;
+}
+
+nav li {
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px 18px;
+    border-radius: 20px;
+
+}
+
+nav li:hover {
+    transform: translateY(-4px);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+
+header {
+    font-family: 'supermercado', cursive;
+    color: black;
+}
+
+.chat-section {
+    font-family: 'supermercado', cursive;
+    font-weight: bold;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: whitesmoke;
+    backdrop-filter: blur(12px);
+
+
+
+
+
+
+}
+
+.chat-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+    background: rgb(166, 160, 160);
+}
+
+.chat-btn:hover {
+    transform: translateY(-5px);
+    background: #070706;
+    box-shadow: 0 0 20px rgba(3, 236, 244, 0.927);
+}
+
+#about {
+    padding: 5rem 10%;
+    border: 1px solid whitesmoke;
+    border-radius: 100px;
+    background: linear-gradient(to right, rgb(221, 218, 218), black);
+    margin: 30px;
+
+}
+
+#about:hover {
+    background: whitesmoke;
+    transform: translateY(-7px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+#about h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+
+}
+
+#about p {
+    font-size: 2rem;
+    line-height: 1.8;
+    color: black;
+    max-width: 700px;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+mark.highlight {
+    background: rgb(234, 227, 14);
+}
+
+#contact {
+    padding: 100px 10%;
+    text-align: center;
+    border: 1px solid rgb(129, 125, 125);
+    border-radius: 70px;
+    background: linear-gradient(to bottom, rgb(72, 86, 86), rgb(144, 144, 150));
+    font-family: 'poppins', cursive;
+    margin: 100px 5%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+#contact h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+
+}
+
+.contact-text {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 1.7;
+    font-size: 1.5rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 220px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-item:hover {
+    transform: translateY(-4px);
+}

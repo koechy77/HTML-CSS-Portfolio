@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    position: sticky;
+    top: 0%;
+    z-index: 1000;
+    background-color: gainsboro;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0,  0, 0, 0.5);
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 40px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+nav li{
+    padding: 10px;
+}
+nav a{
+    text-decoration: none;
+    color: solid black;
+    font-size: 18px;
+}
+.hero-container{
+    width: 90%;
+    margin: auto;
+
+}
+#hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+    min-height: 100vh;
+}
+.hero-image img{
+    width: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,  0,  0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.hero-image:hover{
+    transform: translateY(-7px);
+}
+.hero-text{
+    justify-self: end;
+    text-align: right;
+    border: 1px solid rgba(255,  255,  255,  0.2);
+    backdrop-filter: blur(10px);
+    color: solid black;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    max-width: 500px;
+    padding: 25px;
+    background-color: rgba(255,  255,  255,  0.08);
+}
+.hero-text:hover{
+    transform: translateY(-7px);
+}
+.footer{
+    position: sticky;
+    bottom: 0%;
+    z-index: 1000;
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+     margin: 50px auto;
+    padding: 0.1rem 8%;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    font-family: 'supermercado', cursive;
+}
+.footer-brand h3{
+    font-size: 1.8rem;
+}
+.footer-brand p{
+    opacity: 0.7;
+    justify-content: flex-start;
+}
+.footer-socials{
+    text-decoration: none;
+    color: white;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+.footer-socials a:hover{
+    color: black;
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+.footer-bottom{
+    text-align: right;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.footer-bottom p{
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
