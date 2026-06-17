@@ -15,7 +15,9 @@
 </head>
 
 <body>
-   
+    <button id="aside-toggle" aria-controls="site-aside" aria-expanded="false" aria-label="Open contact panel">
+        <i class="fa-solid fa-bars"></i>
+    </button>
     <div class="container">
         <header>
              <a href="cv.pdf" download>Download CV</a>
@@ -93,7 +95,7 @@
             </section>
 
         </main>
-        <aside>
+        <aside id="site-aside">
             <address>
                 <section>
                     <h3>Contact Information</h3>
@@ -151,6 +153,24 @@
             </section>
         </aside>
     </div>
+    <div id="aside-overlay" aria-hidden="true"></div>
+
+    <script>
+        (function(){
+            const btn = document.getElementById('aside-toggle');
+            const body = document.body;
+            const overlay = document.getElementById('aside-overlay');
+            btn.addEventListener('click', function(){
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                body.classList.toggle('show-aside');
+            });
+            overlay.addEventListener('click', function(){
+                body.classList.remove('show-aside');
+                btn.setAttribute('aria-expanded', 'false');
+            });
+        })();
+    </script>
 </body>
 
 </html>

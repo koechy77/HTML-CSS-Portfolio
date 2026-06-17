@@ -220,3 +220,102 @@ main section:nth-of-type(6) {
         left: 26%;
     }
 }
+
+    /* Keep mobile appearance consistent with medium and larger screens */
+    @media (max-width: 900px) {
+        /* Preserve two-column grid and visual timeline */
+        .container {
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr;
+            padding: 10px;
+            gap: 20px;
+        }
+        .container::before {
+            left: calc(25% + 10px);
+            display: block;
+        }
+        aside {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            border-radius: 40px;
+            padding: 20px;
+        }
+        header {
+            grid-column: 2;
+            grid-row: 1;
+            text-align: right;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+        }
+        .name { font-size: 40px; }
+        .title { font-size: 30px; }
+    }
+
+    @media (max-width: 480px) {
+        /* Maintain the same layout but slightly adjust spacing for very small phones */
+        html { font-size: 16px; }
+        body { font-size: 20px; zoom: 0.9; }
+        /* Make main take full width when aside is closed */
+        .container { padding: 8px; gap: 16px; grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+        .container::before { display: none; }
+        main { grid-column: 1; grid-row: 2; width: 100%; }
+        aside { padding: 16px; border-radius: 36px; }
+        section { padding: 15px; border-radius: 36px; }
+        .name { font-size: 40px; }
+        .title { font-size: 30px; }
+    }
+
+/* Mobile aside toggle styles */
+#aside-toggle {
+    display: none;
+}
+@media (max-width: 480px) {
+    #aside-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: 12px;
+        top: 12px;
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background: black;
+        color: white;
+        border: none;
+        z-index: 1100;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    #aside-overlay {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.45);
+        z-index: 1090;
+        transition: opacity .25s ease;
+        opacity: 0;
+    }
+    aside {
+        /* slide-in panel */
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 78%;
+        max-width: 360px;
+        transform: translateX(-110%);
+        transition: transform .28s ease;
+        z-index: 1105;
+        border-radius: 0 18px 18px 0;
+    }
+    body.show-aside aside {
+        transform: translateX(0);
+    }
+    body.show-aside #aside-overlay {
+        display: block;
+        opacity: 1;
+    }
+}
